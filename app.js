@@ -81,10 +81,12 @@ function checkWin() {
   const classLetters = document.querySelectorAll('.letter');
   const endGameDisplay = document.querySelector('#overlay h2');
   if (classShow.length === classLetters.length) {
+    overlayScreen.className = 'win';
     endGameDisplay.textContent = "You Won";
     startGameButton.textContent = "Play Again";
     overlayScreen.style.display = 'flex';
   } else if (missed >= 5) {
+    overlayScreen.className = 'lose';
     endGameDisplay.textContent = "Game Over";
     startGameButton.textContent = "Play Again";
     overlayScreen.style.display = 'flex';
